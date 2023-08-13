@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Texto from './Texto';
+import Titulo from './Titulo';
+import Imagem from './Imagem';
+import { View } from 'react-native';
+import Paragrafo from './Paragrafo';
+import Card from './Card';
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  <View style={{padding: 10, flexDirection: 'column'}}>
+    <Titulo texto1="INTRODUÇÃO"/>
+    <Imagem />
+    <Paragrafo texto="Parágrafo qualquer justificado na tela do dispositivo movel usando react native"></Paragrafo>
+    <Card titulo="Titulo" texto1="Texto" imagem={require('./img/1.png')}/>
+  </View> 
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
